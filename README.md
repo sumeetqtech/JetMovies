@@ -33,6 +33,7 @@ A device or emulator running Android 6.0 (API level 23) or higher
 - Click the Run button in Android Studio.
 
 # 📂 Project Structure
+```
 JetMovies/
 ├── app/                   # Main application module
 │   ├── src/
@@ -42,6 +43,7 @@ JetMovies/
 │           ├── AndroidManifest.xml
 ├── build.gradle           # Project-level Gradle file
 ├── settings.gradle        # Settings file for project modules
+```
 
 # 👩‍💻 Contributing
 Contributions are welcome! If you’d like to contribute:
