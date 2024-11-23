@@ -1,6 +1,7 @@
 package com.example.jetmovieapp.components
 
 import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -9,6 +10,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.shape.CornerSize
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
@@ -48,15 +50,19 @@ import com.example.jetmovieapp.model.getMovies
 
 @Preview
 @Composable
-fun MovieRow(movie: Movie = getMovies()[0], onClick: (String) -> Unit = {}) {
+fun MovieRow(
+    modifier: Modifier = Modifier,
+    movie: Movie = getMovies()[0],
+    onClick: (String) -> Unit = {}
+) {
     var expanded by remember {
         mutableStateOf(false)
     }
     Card(
-        modifier = Modifier
+        modifier = modifier
             .padding(4.dp)
             .fillMaxWidth()
-//            .height(130.dp)
+            .wrapContentHeight()
             .clickable {
                 onClick.invoke(movie.id)
             },
@@ -65,7 +71,7 @@ fun MovieRow(movie: Movie = getMovies()[0], onClick: (String) -> Unit = {}) {
         colors = CardDefaults.cardColors(containerColor = Color.White)
     ) {
         Row(
-            modifier = Modifier.fillMaxSize(),
+            modifier = Modifier.fillMaxWidth(),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.Start
         ) {
@@ -89,7 +95,7 @@ fun MovieRow(movie: Movie = getMovies()[0], onClick: (String) -> Unit = {}) {
                         .build(),
                     placeholder = painterResource(R.drawable.ic_launcher_background),
                     contentDescription = "Movie Poster",
-                    contentScale = ContentScale.Crop,
+                    contentScale = ContentScale.FillBounds,
                 )
             }
             Column(modifier = Modifier.padding(4.dp)) {

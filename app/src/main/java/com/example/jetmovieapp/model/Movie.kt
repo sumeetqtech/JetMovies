@@ -176,3 +176,9 @@ fun getMovies(): List<Movie> {
         ),
     )
 }
+
+fun getMovieById(id: String): Movie? {
+    return getMovies().find { movie ->
+        id == movie.id
+    }
+}
