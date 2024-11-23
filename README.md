@@ -55,3 +55,12 @@ Contributions are welcome! If you’d like to contribute:
 - Open a pull request.
 
 
+# Screenshots
+
+![Screenshot_20241123_162826](https://github.com/user-attachments/assets/3653c79e-1552-4d04-9eb1-ac82eba5fdbc)
+![Screenshot_20241123_162848](https://github.com/user-attachments/assets/a1f9200c-d0f5-4140-a3cf-2c5d0ae98311)
+![Screenshot_20241123_162903](https://github.com/user-attachments/assets/8eb542a2-8c74-465d-a7e5-95bc9f899ef3)
+
+
+
+
